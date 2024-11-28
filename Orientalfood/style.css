@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Open Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+:root{
+    --red: #d63a25;
+    --white: #fff;
+    --dark: #1e1c2a;
+}
+
+body{
+    color: var(--dark);
+    background-color: #f0e4a0;
+}
+ 
+/*Menu*/
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: #fff;
+    transition: all 0.5s;
+    position: fixed;
+}
+
+.navigation .logo{
+    color: #d63a25;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.logo span{
+    color: black
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a{
+    color: black;
+    font-size: 17px;
+    font-weight: all 0.5s;
+}
+
+.navigation ul li a:hover{
+    color: #d63a25;
+}
+
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/*Menu*/
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: black;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: #d63a25;
+}
+
+.home{
+    width: 1005;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-text{
+    max-width: 37rem;
+}
+
+.home-text .text-h4{
+    font-size: 1.5rem;
+    color: red;
+    margin-bottom: 1rem;
+}
+
+.home-text .text-h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+
+.home-text p{
+    margin-bottom: 4rem;
+}
+
+.home-btn{
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+    background-color: #d63a25;
+}
+
+.home-btn:hover{
+    background: rgba(236, 127, 54, 0.849);
+}
+
+.home-img img{
+    width: 100%;
+}
+
+/*responsivo*/
+@media (max-width:785px){
+    .navigation{
+        padding: 18px 20px;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: white;
+        gap: -10px;
+        transition: o.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rems;
+    }
+}
+
+/*PAGINA DE LOGIN*/
+
+.title-login{
+    padding: 15px;
+}
+.title-login h1{
+    align-items: center;
+    color: #cf1a02;
+    margin-top: 30px;
+}
+
+.form-login{
+    width: 530px;
+    height: 400px;
+    background-color: #f1e07c;
+    align-items: center;
+    padding: 15px;
+    border: 1.5px solid #cf1a02;
+    border-radius: 15px;
+    justify-content: center;
+    margin-left: 390px;
+}
+.login-txt{
+    width: 450px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: fixed;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+.login-txt label{
+    color: #cf1a02;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    font-weight:547;
+    text-align: left;
+}
+.login-txt input{
+    padding: 7px;
+    width: 200px;
+    align-items: center;
+    background-color:#f1e9b8;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    margin-top: 30px;
+}
+.form-btn button{
+    margin-top: 40px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color:#d63a25;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #cf1a02;
+    margin-left: 150px;
+    letter-spacing: 1px;
+}
+.form-btn p{
+    font-size: 15px;
+    margin-top: 18px;
+    color: #cf1a02;
+    margin-left: 120px;
+}
+.form-btn small{
+    margin-left: 160px;
+    margin-top: -40px;
+}
